@@ -1,0 +1,15 @@
+/home/linux/Documents/GitHub/C-.NET/Day1/lab3/bin/Debug/net10.0/lab3
+/home/linux/Documents/GitHub/C-.NET/Day1/lab3/bin/Debug/net10.0/lab3.deps.json
+/home/linux/Documents/GitHub/C-.NET/Day1/lab3/bin/Debug/net10.0/lab3.runtimeconfig.json
+/home/linux/Documents/GitHub/C-.NET/Day1/lab3/bin/Debug/net10.0/lab3.dll
+/home/linux/Documents/GitHub/C-.NET/Day1/lab3/bin/Debug/net10.0/lab3.pdb
+/home/linux/Documents/GitHub/C-.NET/Day1/lab3/obj/Debug/net10.0/lab3.GeneratedMSBuildEditorConfig.editorconfig
+/home/linux/Documents/GitHub/C-.NET/Day1/lab3/obj/Debug/net10.0/lab3.AssemblyInfoInputs.cache
+/home/linux/Documents/GitHub/C-.NET/Day1/lab3/obj/Debug/net10.0/lab3.AssemblyInfo.cs
+/home/linux/Documents/GitHub/C-.NET/Day1/lab3/obj/Debug/net10.0/lab3.csproj.CoreCompileInputs.cache
+/home/linux/Documents/GitHub/C-.NET/Day1/lab3/obj/Debug/net10.0/lab3.sourcelink.json
+/home/linux/Documents/GitHub/C-.NET/Day1/lab3/obj/Debug/net10.0/lab3.dll
+/home/linux/Documents/GitHub/C-.NET/Day1/lab3/obj/Debug/net10.0/refint/lab3.dll
+/home/linux/Documents/GitHub/C-.NET/Day1/lab3/obj/Debug/net10.0/lab3.pdb
+/home/linux/Documents/GitHub/C-.NET/Day1/lab3/obj/Debug/net10.0/lab3.genruntimeconfig.cache
+/home/linux/Documents/GitHub/C-.NET/Day1/lab3/obj/Debug/net10.0/ref/lab3.dll
