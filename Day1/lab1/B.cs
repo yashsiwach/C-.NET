@@ -11,14 +11,14 @@ namespace Area
     {
         public void Print()
         {
-            string Radi = Console.ReadLine();
+            string Radi;
+            while((Radi = Console.ReadLine())!="-1"){
+
             if (!(double.TryParse(Radi, out double radius)))
             {
                 Console.WriteLine("invalid");
             }
-            else
-            {
-                if (radius < 0)
+            else if (radius < 0)
                 {
                     Console.WriteLine("less than 0");
                 }
@@ -26,10 +26,9 @@ namespace Area
                 {
                     double area = Math.PI * radius * radius;
                     Console.WriteLine($"{area:F2}");
-
-
                 }
             }
+            
 
         }
     }

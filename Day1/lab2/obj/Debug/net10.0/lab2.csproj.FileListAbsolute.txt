@@ -12,3 +12,4 @@
 /home/linux/Documents/GitHub/C-.NET/Day1/lab2/obj/Debug/net10.0/lab2.pdb
 /home/linux/Documents/GitHub/C-.NET/Day1/lab2/obj/Debug/net10.0/lab2.genruntimeconfig.cache
 /home/linux/Documents/GitHub/C-.NET/Day1/lab2/obj/Debug/net10.0/ref/lab2.dll
+/home/linux/Documents/GitHub/C-.NET/Day1/lab2/obj/Debug/net10.0/lab2.sourcelink.json
