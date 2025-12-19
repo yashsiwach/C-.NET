@@ -8,7 +8,7 @@ namespace ClassWork
     {
         public static void Main(String[] args)
         {
-            var obj=new Game();
+            var obj=new Exce();
             obj.Print();
         }
     }
