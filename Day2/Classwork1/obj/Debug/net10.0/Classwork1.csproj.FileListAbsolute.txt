@@ -1,0 +1,15 @@
+/home/linux/Documents/GitHub/C-.NET/Day2/Classwork1/bin/Debug/net10.0/Classwork1
+/home/linux/Documents/GitHub/C-.NET/Day2/Classwork1/bin/Debug/net10.0/Classwork1.deps.json
+/home/linux/Documents/GitHub/C-.NET/Day2/Classwork1/bin/Debug/net10.0/Classwork1.runtimeconfig.json
+/home/linux/Documents/GitHub/C-.NET/Day2/Classwork1/bin/Debug/net10.0/Classwork1.dll
+/home/linux/Documents/GitHub/C-.NET/Day2/Classwork1/bin/Debug/net10.0/Classwork1.pdb
+/home/linux/Documents/GitHub/C-.NET/Day2/Classwork1/obj/Debug/net10.0/Classwork1.GeneratedMSBuildEditorConfig.editorconfig
+/home/linux/Documents/GitHub/C-.NET/Day2/Classwork1/obj/Debug/net10.0/Classwork1.AssemblyInfoInputs.cache
+/home/linux/Documents/GitHub/C-.NET/Day2/Classwork1/obj/Debug/net10.0/Classwork1.AssemblyInfo.cs
+/home/linux/Documents/GitHub/C-.NET/Day2/Classwork1/obj/Debug/net10.0/Classwork1.csproj.CoreCompileInputs.cache
+/home/linux/Documents/GitHub/C-.NET/Day2/Classwork1/obj/Debug/net10.0/Classwork1.sourcelink.json
+/home/linux/Documents/GitHub/C-.NET/Day2/Classwork1/obj/Debug/net10.0/Classwork1.dll
+/home/linux/Documents/GitHub/C-.NET/Day2/Classwork1/obj/Debug/net10.0/refint/Classwork1.dll
+/home/linux/Documents/GitHub/C-.NET/Day2/Classwork1/obj/Debug/net10.0/Classwork1.pdb
+/home/linux/Documents/GitHub/C-.NET/Day2/Classwork1/obj/Debug/net10.0/Classwork1.genruntimeconfig.cache
+/home/linux/Documents/GitHub/C-.NET/Day2/Classwork1/obj/Debug/net10.0/ref/Classwork1.dll

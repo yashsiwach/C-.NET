@@ -18,7 +18,7 @@ namespace Time
                 Console.WriteLine("invalid");
             }
             else if (sec < 0)
-            {
+            {Siwach143
                 Console.WriteLine("negetive time");
             }
             else
