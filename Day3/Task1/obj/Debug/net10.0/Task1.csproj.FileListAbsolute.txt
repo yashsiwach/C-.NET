@@ -1,0 +1,15 @@
+/home/linux/Documents/GitHub/C-.NET/Day3/Task1/obj/Debug/net10.0/Task1.GeneratedMSBuildEditorConfig.editorconfig
+/home/linux/Documents/GitHub/C-.NET/Day3/Task1/obj/Debug/net10.0/Task1.AssemblyInfoInputs.cache
+/home/linux/Documents/GitHub/C-.NET/Day3/Task1/obj/Debug/net10.0/Task1.AssemblyInfo.cs
+/home/linux/Documents/GitHub/C-.NET/Day3/Task1/obj/Debug/net10.0/Task1.csproj.CoreCompileInputs.cache
+/home/linux/Documents/GitHub/C-.NET/Day3/Task1/obj/Debug/net10.0/Task1.sourcelink.json
+/home/linux/Documents/GitHub/C-.NET/Day3/Task1/bin/Debug/net10.0/Task1
+/home/linux/Documents/GitHub/C-.NET/Day3/Task1/bin/Debug/net10.0/Task1.deps.json
+/home/linux/Documents/GitHub/C-.NET/Day3/Task1/bin/Debug/net10.0/Task1.runtimeconfig.json
+/home/linux/Documents/GitHub/C-.NET/Day3/Task1/bin/Debug/net10.0/Task1.dll
+/home/linux/Documents/GitHub/C-.NET/Day3/Task1/bin/Debug/net10.0/Task1.pdb
+/home/linux/Documents/GitHub/C-.NET/Day3/Task1/obj/Debug/net10.0/Task1.dll
+/home/linux/Documents/GitHub/C-.NET/Day3/Task1/obj/Debug/net10.0/refint/Task1.dll
+/home/linux/Documents/GitHub/C-.NET/Day3/Task1/obj/Debug/net10.0/Task1.pdb
+/home/linux/Documents/GitHub/C-.NET/Day3/Task1/obj/Debug/net10.0/Task1.genruntimeconfig.cache
+/home/linux/Documents/GitHub/C-.NET/Day3/Task1/obj/Debug/net10.0/ref/Task1.dll

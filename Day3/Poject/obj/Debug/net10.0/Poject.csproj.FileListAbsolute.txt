@@ -1,0 +1,15 @@
+/home/linux/Documents/GitHub/C-.NET/Day3/Poject/obj/Debug/net10.0/Poject.GeneratedMSBuildEditorConfig.editorconfig
+/home/linux/Documents/GitHub/C-.NET/Day3/Poject/obj/Debug/net10.0/Poject.AssemblyInfoInputs.cache
+/home/linux/Documents/GitHub/C-.NET/Day3/Poject/obj/Debug/net10.0/Poject.AssemblyInfo.cs
+/home/linux/Documents/GitHub/C-.NET/Day3/Poject/obj/Debug/net10.0/Poject.csproj.CoreCompileInputs.cache
+/home/linux/Documents/GitHub/C-.NET/Day3/Poject/obj/Debug/net10.0/Poject.sourcelink.json
+/home/linux/Documents/GitHub/C-.NET/Day3/Poject/bin/Debug/net10.0/Poject
+/home/linux/Documents/GitHub/C-.NET/Day3/Poject/bin/Debug/net10.0/Poject.deps.json
+/home/linux/Documents/GitHub/C-.NET/Day3/Poject/bin/Debug/net10.0/Poject.runtimeconfig.json
+/home/linux/Documents/GitHub/C-.NET/Day3/Poject/bin/Debug/net10.0/Poject.dll
+/home/linux/Documents/GitHub/C-.NET/Day3/Poject/bin/Debug/net10.0/Poject.pdb
+/home/linux/Documents/GitHub/C-.NET/Day3/Poject/obj/Debug/net10.0/Poject.dll
+/home/linux/Documents/GitHub/C-.NET/Day3/Poject/obj/Debug/net10.0/refint/Poject.dll
+/home/linux/Documents/GitHub/C-.NET/Day3/Poject/obj/Debug/net10.0/Poject.pdb
+/home/linux/Documents/GitHub/C-.NET/Day3/Poject/obj/Debug/net10.0/Poject.genruntimeconfig.cache
+/home/linux/Documents/GitHub/C-.NET/Day3/Poject/obj/Debug/net10.0/ref/Poject.dll
