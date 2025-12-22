@@ -7,7 +7,7 @@ namespace Data
     {
         public int id {get; set;}
         public string name{get;set;}
-        public ArrayList subjects { get; set; } = new ArrayList();
+        public ArrayList subjects{get;set;}  = new ArrayList();
         public Student()
         {
             this.id=1;
