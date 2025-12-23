@@ -1,0 +1,15 @@
+/home/linux/Documents/GitHub/C-.NET/Day4/validation/obj/Debug/net10.0/validation.GeneratedMSBuildEditorConfig.editorconfig
+/home/linux/Documents/GitHub/C-.NET/Day4/validation/obj/Debug/net10.0/validation.AssemblyInfoInputs.cache
+/home/linux/Documents/GitHub/C-.NET/Day4/validation/obj/Debug/net10.0/validation.AssemblyInfo.cs
+/home/linux/Documents/GitHub/C-.NET/Day4/validation/obj/Debug/net10.0/validation.csproj.CoreCompileInputs.cache
+/home/linux/Documents/GitHub/C-.NET/Day4/validation/obj/Debug/net10.0/validation.sourcelink.json
+/home/linux/Documents/GitHub/C-.NET/Day4/validation/bin/Debug/net10.0/validation
+/home/linux/Documents/GitHub/C-.NET/Day4/validation/bin/Debug/net10.0/validation.deps.json
+/home/linux/Documents/GitHub/C-.NET/Day4/validation/bin/Debug/net10.0/validation.runtimeconfig.json
+/home/linux/Documents/GitHub/C-.NET/Day4/validation/bin/Debug/net10.0/validation.dll
+/home/linux/Documents/GitHub/C-.NET/Day4/validation/bin/Debug/net10.0/validation.pdb
+/home/linux/Documents/GitHub/C-.NET/Day4/validation/obj/Debug/net10.0/validation.dll
+/home/linux/Documents/GitHub/C-.NET/Day4/validation/obj/Debug/net10.0/refint/validation.dll
+/home/linux/Documents/GitHub/C-.NET/Day4/validation/obj/Debug/net10.0/validation.pdb
+/home/linux/Documents/GitHub/C-.NET/Day4/validation/obj/Debug/net10.0/validation.genruntimeconfig.cache
+/home/linux/Documents/GitHub/C-.NET/Day4/validation/obj/Debug/net10.0/ref/validation.dll

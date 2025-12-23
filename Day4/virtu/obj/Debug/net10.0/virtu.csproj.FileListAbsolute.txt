@@ -1,0 +1,15 @@
+/home/linux/Documents/GitHub/C-.NET/Day4/virtu/obj/Debug/net10.0/virtu.GeneratedMSBuildEditorConfig.editorconfig
+/home/linux/Documents/GitHub/C-.NET/Day4/virtu/obj/Debug/net10.0/virtu.AssemblyInfoInputs.cache
+/home/linux/Documents/GitHub/C-.NET/Day4/virtu/obj/Debug/net10.0/virtu.AssemblyInfo.cs
+/home/linux/Documents/GitHub/C-.NET/Day4/virtu/obj/Debug/net10.0/virtu.csproj.CoreCompileInputs.cache
+/home/linux/Documents/GitHub/C-.NET/Day4/virtu/obj/Debug/net10.0/virtu.sourcelink.json
+/home/linux/Documents/GitHub/C-.NET/Day4/virtu/bin/Debug/net10.0/virtu
+/home/linux/Documents/GitHub/C-.NET/Day4/virtu/bin/Debug/net10.0/virtu.deps.json
+/home/linux/Documents/GitHub/C-.NET/Day4/virtu/bin/Debug/net10.0/virtu.runtimeconfig.json
+/home/linux/Documents/GitHub/C-.NET/Day4/virtu/bin/Debug/net10.0/virtu.dll
+/home/linux/Documents/GitHub/C-.NET/Day4/virtu/bin/Debug/net10.0/virtu.pdb
+/home/linux/Documents/GitHub/C-.NET/Day4/virtu/obj/Debug/net10.0/virtu.dll
+/home/linux/Documents/GitHub/C-.NET/Day4/virtu/obj/Debug/net10.0/refint/virtu.dll
+/home/linux/Documents/GitHub/C-.NET/Day4/virtu/obj/Debug/net10.0/virtu.pdb
+/home/linux/Documents/GitHub/C-.NET/Day4/virtu/obj/Debug/net10.0/virtu.genruntimeconfig.cache
+/home/linux/Documents/GitHub/C-.NET/Day4/virtu/obj/Debug/net10.0/ref/virtu.dll
