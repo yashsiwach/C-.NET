@@ -1,3 +1,5 @@
+using System.Collections;
+
 namespace Project1
 {
     /// <summary>
@@ -9,6 +11,8 @@ namespace Project1
         #region Member Variables
         public int id;
         public String? subjects;
+        public ArrayList students=new ArrayList();
+
         #endregion
 
         #region Methods
@@ -51,7 +55,19 @@ namespace Project1
             string? examName = Console.ReadLine();
             this.examId=examId;
             this.examName=examName;
-
+            System.Console.WriteLine("How many students you want to add to this exam");
+            int num=int.Parse(Console.ReadLine()!);
+            while (num>0)
+            {
+                
+                System.Console.WriteLine("enter student id ");
+                int sid=int.Parse(Console.ReadLine()!);
+                System.Console.WriteLine("enter student Name");
+                string? sname=Console.ReadLine();
+                Student temp=new Student(sid,sname,this.examId);
+                students.Add(temp);
+                num--;
+            }
         }
         /// <summary>
         /// Displays the complete details of the created exam and its associated term.
@@ -71,6 +87,11 @@ namespace Project1
         public void Show()
         {
             System.Console.WriteLine($"Done you have created {examName} exam of term {id}.Your Exam Id is {examId} take place on {examDate} in room {examRoom}.Your Examinar is {exName}");
+            System.Console.WriteLine("students are :");
+            foreach(Student i in students)
+            {
+                System.Console.WriteLine(i.sName);
+            }
 
         }
         #endregion

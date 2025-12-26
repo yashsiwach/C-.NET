@@ -1,3 +1,5 @@
+using System.Collections;
+
 namespace Project1
 {
     /// <summary>
@@ -16,7 +18,9 @@ namespace Project1
         public Exam()
         {
             Schedule();
+            
         }
+        
         /// <summary>
         /// Schedules the exam by collecting the exam date and room number
         /// from the user and storing them in the object.
