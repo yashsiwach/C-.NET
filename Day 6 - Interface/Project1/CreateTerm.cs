@@ -1,99 +1,95 @@
 using System.Collections;
+using System.Threading.Tasks.Dataflow;
 
 namespace Project1
 {
     /// <summary>
-    /// This class Create the Term  and inherit the Exam class and Termbase interface
+    /// This class is used to create a Term and it inherits the Exam class
+    /// and implements the TermBase interface
     /// </summary>
-
-    public class CreateTerm : Exam,TermBase
+    public class CreateTerm : Exam, TermBase
     {
         #region Member Variables
+
+        /// <summary>
+        /// Stores term id
+        /// </summary>
         public int id;
-        public String? subjects;
-        public ArrayList students=new ArrayList();
+
+        /// <summary>
+        /// Stores subjects of the term
+        /// </summary>
+        public string? subjects;
 
         #endregion
 
         #region Methods
+
         /// <summary>
-        /// Method to create the Term and Call the Function to make the exam too!!
+        /// Constructor that creates a term by taking input from the user
+        /// and also calls the method to create the exam
         /// </summary>
         public CreateTerm()
         {
             #region Input Taking
+
             System.Console.WriteLine("Enter the term Id");
             int tid = int.Parse(Console.ReadLine()!);
             this.id = tid;
-            System.Console.WriteLine(" Enter subjects in one line");
+
+            System.Console.WriteLine("Enter subjects in one line");
             string? subs = Console.ReadLine();
             this.subjects = subs;
+
             #endregion
-            
+
             CreateExam();
         }
+
         /// <summary>
-        /// Creates an exam by taking exam details from the user and assigning
-        /// them to the current object.
+        /// Creates an exam by taking exam details from the user
+        /// and assigning them to the current object
         /// </summary>
-        /// <remarks>
-        /// This method prompts the user to enter the exam ID and exam name,
-        /// reads the input from the console, and stores the values in the
-        /// corresponding class-level variables.
-        /// </remarks>
-        /// <variables>
-        /// examId    : Stores the unique identifier of the exam entered by the user.
-        /// examName  : Stores the name of the exam entered by the user.
-        /// </variables>        
-            
         public void CreateExam()
         {
-            
             System.Console.WriteLine("Enter the Exam Id");
             int examId = int.Parse(Console.ReadLine()!);
+
             System.Console.WriteLine("Enter the name of exam");
             string? examName = Console.ReadLine();
-            this.examId=examId;
-            this.examName=examName;
-            System.Console.WriteLine("How many students you want to add to this exam");
-            int num=int.Parse(Console.ReadLine()!);
-            while (num>0)
+
+            this.examId = examId;
+            this.examName = examName;
+
+            System.Console.WriteLine("Want to Add more students \n1. yes \n2. no");
+            int choice = int.Parse(Console.ReadLine()!);
+
+            if (choice == 1)
             {
-                
-                System.Console.WriteLine("enter student id ");
-                int sid=int.Parse(Console.ReadLine()!);
-                System.Console.WriteLine("enter student Name");
-                string? sname=Console.ReadLine();
-                Student temp=new Student(sid,sname,this.examId);
-                students.Add(temp);
-                num--;
+                Batch bth = new Batch();
+                bth.AddMore();
             }
         }
+
         /// <summary>
-        /// Displays the complete details of the created exam and its associated term.
+        /// Displays the complete details of the created term and exam
         /// </summary>
-        /// <remarks>
-        /// This method prints a summary including the exam name, term ID, exam ID,
-        /// scheduled date, room number, and the assigned examiner name.
-        /// </remarks>
-        /// <variables>
-        /// examName  : Name of the exam.
-        /// id        : Term identifier.
-        /// examId    : Unique exam identifier.
-        /// examDate  : Scheduled date of the exam.
-        /// examRoom  : Room number where the exam will take place.
-        /// exName    : Name of the assigned examiner.
-        /// </variables>
         public void Show()
         {
-            System.Console.WriteLine($"Done you have created {examName} exam of term {id}.Your Exam Id is {examId} take place on {examDate} in room {examRoom}.Your Examinar is {exName}");
-            System.Console.WriteLine("students are :");
-            foreach(Student i in students)
+            System.Console.WriteLine(
+                $"Done you have created {examName} exam of term {id}. " +
+                $"Your Exam Id is {examId} take place on {examDate} in room {examRoom}. " +
+                $"Your Examiner is {exName}"
+            );
+
+            System.Console.WriteLine("Students are :");
+
+            foreach (var i in Batch.studentList)
             {
                 System.Console.WriteLine(i.sName);
             }
-
         }
+
         #endregion
     }
 }

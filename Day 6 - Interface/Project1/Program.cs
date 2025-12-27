@@ -9,7 +9,6 @@ public class Program
     /// </summary>
     public static void Main()
     {
-    
         CreateTerm term=new CreateTerm();
         term.Show();
     }

@@ -1,42 +1,52 @@
 namespace Project1
 {
     /// <summary>
-    /// Creating the Examiner 
+    /// This class is used to create an Examiner
     /// </summary>
     public class Examiner : Employe
     {
-        
         #region Class Varibles
+
+        /// <summary>
+        /// Stores examiner id
+        /// </summary>
         public int exId;
+
+        /// <summary>
+        /// Stores examiner name
+        /// </summary>
         public string? exName;
+
         #endregion
 
         #region Methods
+
         /// <summary>
-        /// Creates an examiner by taking employee details from the user
-        /// and assigning the examiner to the exam.
+        /// Default constructor that takes employee details
+        /// and assigns the examiner to the exam
         /// </summary>
-        /// <variables>
-        /// eid    : Employee ID entered by the user.
-        /// ename  : Employee name entered by the user.
-        /// exId   : Stores the examiner's employee ID.
-        /// exName : Stores the examiner's name.
-        /// </variables>
         public Examiner()
         {
-            System.Console.WriteLine("enter employe id");
+            System.Console.WriteLine("Enter employee id: ");
             int eid = int.Parse(Console.ReadLine()!);
-            System.Console.WriteLine("enter emplye Name");
+
+            System.Console.WriteLine("Enter emplyee Name: ");
             string? ename = Console.ReadLine();
+
             this.exId = eid;
             this.exName = ename;
+
             IsAssigned();
         }
+
+        /// <summary>
+        /// Displays confirmation message for examiner assignment
+        /// </summary>
         public void IsAssigned()
         {
-            System.Console.WriteLine("assigned");
+            System.Console.WriteLine("Assigned !!!");
         }
+
         #endregion
     }
-
 }

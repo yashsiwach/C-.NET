@@ -3,35 +3,51 @@ using System.Collections;
 namespace Project1
 {
     /// <summary>
-    /// This is the class to Create the exam
+    /// This class is used to create and schedule an exam
     /// </summary>
     public class Exam : Examiner
     {
         #region Member Variables
+
+        /// <summary>
+        /// Stores unique exam id
+        /// </summary>
         public int examId;
+
+        /// <summary>
+        /// Stores name of the exam
+        /// </summary>
         public string? examName;
+
+        /// <summary>
+        /// Stores exam date
+        /// </summary>
         public string? examDate;
+
+        /// <summary>
+        /// Stores exam room number
+        /// </summary>
         public int examRoom;
+
         #endregion
 
         #region Class Methods
+
+        /// <summary>
+        /// Default constructor that automatically schedules the exam
+        /// </summary>
         public Exam()
         {
             Schedule();
-            
         }
-        
+
         /// <summary>
-        /// Schedules the exam by collecting the exam date and room number
-        /// from the user and storing them in the object.
+        /// Schedules the exam by taking exam date and room number
+        /// from the user and assigning them to the object
         /// </summary>
-        /// <variables>
-        /// examDate  : Date on which the exam is scheduled.
-        /// examRoom  : Room number where the exam will be conducted.
-        /// </variables>
         public void Schedule()
         {
-            System.Console.WriteLine("Enter  the date");
+            System.Console.WriteLine("Enter exam date");
             string? examDate = Console.ReadLine();
             this.examDate = examDate;
 
@@ -39,8 +55,7 @@ namespace Project1
             int examRoom = int.Parse(Console.ReadLine()!);
             this.examRoom = examRoom;
         }
+
         #endregion
-
-
     }
 }
