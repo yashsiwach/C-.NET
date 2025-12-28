@@ -1,4 +1,4 @@
-﻿using Project1;
+﻿using Project1.Model;
 /// <summary>
 /// Project to schedule the Exam 
 /// </summary>
