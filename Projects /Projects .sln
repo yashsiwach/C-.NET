@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScenrioProject4 -PayRollPro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indexes", "Indexes\Indexes.csproj", "{CF87072D-F2F1-4B1A-BD0E-68D8A6E1D37C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibaryManagement", "LibaryManagement\LibaryManagement.csproj", "{E3A03993-1AAC-4985-86D5-FF210F79198A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -103,6 +105,18 @@ Global
 		{CF87072D-F2F1-4B1A-BD0E-68D8A6E1D37C}.Release|x64.Build.0 = Release|Any CPU
 		{CF87072D-F2F1-4B1A-BD0E-68D8A6E1D37C}.Release|x86.ActiveCfg = Release|Any CPU
 		{CF87072D-F2F1-4B1A-BD0E-68D8A6E1D37C}.Release|x86.Build.0 = Release|Any CPU
+		{E3A03993-1AAC-4985-86D5-FF210F79198A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3A03993-1AAC-4985-86D5-FF210F79198A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3A03993-1AAC-4985-86D5-FF210F79198A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E3A03993-1AAC-4985-86D5-FF210F79198A}.Debug|x64.Build.0 = Debug|Any CPU
+		{E3A03993-1AAC-4985-86D5-FF210F79198A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E3A03993-1AAC-4985-86D5-FF210F79198A}.Debug|x86.Build.0 = Debug|Any CPU
+		{E3A03993-1AAC-4985-86D5-FF210F79198A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3A03993-1AAC-4985-86D5-FF210F79198A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3A03993-1AAC-4985-86D5-FF210F79198A}.Release|x64.ActiveCfg = Release|Any CPU
+		{E3A03993-1AAC-4985-86D5-FF210F79198A}.Release|x64.Build.0 = Release|Any CPU
+		{E3A03993-1AAC-4985-86D5-FF210F79198A}.Release|x86.ActiveCfg = Release|Any CPU
+		{E3A03993-1AAC-4985-86D5-FF210F79198A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
