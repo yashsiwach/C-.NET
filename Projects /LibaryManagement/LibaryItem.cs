@@ -6,6 +6,7 @@ namespace LibarySystem
         public string? title;
         public string? author;
         public int itemId;
+        public ItemStatus type{get;set;}
         public abstract void Display();
       
         public abstract void CalculateLateFee(int day);

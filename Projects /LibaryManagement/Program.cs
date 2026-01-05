@@ -35,5 +35,12 @@ public class Program
         LibraryAnalytics.Total++;
         LibraryAnalytics.Display();
 
+        // Task 7 
+        var user=new User();
+        user.Role=UserRole.Member;
+        LibaryItem enumAssign=new Book("Book6","bookauthor6",6);
+        enumAssign.type=ItemStatus.Available;
+
+
     }
 }

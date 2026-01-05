@@ -8,6 +8,7 @@ namespace LibarySystem
             this.title = title;
             this.author = author;
             this.itemId = itemId;
+            this.type=ItemStatus.Available;
         }
         public override void Display()
         {
