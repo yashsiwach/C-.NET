@@ -1,8 +1,13 @@
 ﻿public class Program
 {
-    class yashException : Exception
+    public class yashException : Exception
     {
-        public override string Message => "change the name yash";
+        public override string Message => Handlebase(base.Message);
+        private string Handlebase(string sysMsg)
+        {
+            System.Console.WriteLine(sysMsg);
+            return "ok "+sysMsg;
+        }
     }
     public static void Main()
     {
