@@ -43,7 +43,16 @@ public sealed class sclass : Hello
         System.Console.WriteLine("hogya");
     }
 }
-public abstract class Program
+interface task1
+{
+    void see2();
+}
+interface task:task1
+{
+    void see();
+   
+}
+public  class Program:task
 {
     public static void Main()
     {
@@ -60,14 +69,26 @@ public abstract class Program
         // System.Console.WriteLine(obj.Name);
         
         //abstract class
-        Test obj=new Test();
-        obj.Show();
+        // Test obj=new Test();
+        // obj.Show();
         //obj.ok();
-        obj.ook();
-
+        // obj.ook();
         var obj2=new sclass();
         obj2.Show();
+
+        Program obj1=new Program();
+        
+        obj1.see();
+        obj1.see2();
     
+    }
+    public void see()
+    {
+        System.Console.WriteLine("helloji");
+    }
+    public void see2()
+    {
+        System.Console.WriteLine("jaatji");
     }
    
 }
