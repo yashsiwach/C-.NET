@@ -1,4 +1,6 @@
-﻿public class Program
+﻿using System.Collections.Immutable;
+
+public class Program
 {
     public static T[] sorted<T>(T[] a, T[] b) where T : IComparable<T>
     {
@@ -43,6 +45,8 @@
         {
             System.Console.Write(i+" ");
         }
+        List<int>li=new List<int>();
+        li.ToSortedDictionary();
 
     }
 }
