@@ -1,0 +1,38 @@
+﻿@page
+@model IndexModel
+@{ Layout = null; }
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini LeetCode</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(135deg, #1a1a2e, #16213e); color: #fff; min-height: 100vh; }
+        .container { display: flex; height: 100vh; }
+        .left { width: 35%; padding: 30px; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border-right: 1px solid rgba(255,255,255,0.1); }
+        .left h2 { color: #00d4ff; margin-bottom: 20px; font-size: 1.5rem; }
+        .left p { line-height: 1.8; color: #b8c5d6; }
+        .right { width: 65%; padding: 30px; display: flex; flex-direction: column; }
+        textarea { flex: 1; background: #0d1117; color: #7ee787; font-family: 'Fira Code', monospace; font-size: 14px; padding: 20px; border: 1px solid #30363d; border-radius: 8px; resize: none; outline: none; }
+        textarea:focus { border-color: #58a6ff; box-shadow: 0 0 0 3px rgba(88,166,255,0.2); }
+        button { margin-top: 15px; padding: 12px 30px; background: linear-gradient(135deg, #00d4ff, #0099cc); border: none; color: #fff; font-weight: 600; border-radius: 6px; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; align-self: flex-start; }
+        button:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(0,212,255,0.4); }
+        .output { margin-top: 20px; background: #0d1117; padding: 20px; border-radius: 8px; border: 1px solid #30363d; min-height: 120px; font-family: 'Fira Code', monospace; font-size: 13px; color: #f0f6fc; overflow: auto; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h2>📝 Question</h2>
+            <p>Write a C# program that reads input and prints output.</p>
+        </div>
+        <div class="right">
+            <form method="post" style="display:flex; flex-direction:column; flex:1;">
+                <textarea name="Code">@Model.Code</textarea>
+                <button type="submit">▶ Run Code</button>
+            </form>
+            <pre class="output">@Model.Output</pre>
+        </div>
+    </div>
+</body>
+</html>

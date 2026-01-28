@@ -1,9 +1,7 @@
-﻿public class Program
-{
-    public  static void Main(string[] args)
-    {
-        int first=int.Parse(Console.ReadLine()!);
-        int second=int.Parse(Console.ReadLine()!);
-        System.Console.WriteLine(first+second);
-    }
-}
+﻿using System;
+            class Test {
+            static void Main() {
+                int n=int.Parse(Console.ReadLine()!);
+                System.Console.WriteLine(n);
+            }
+        }
