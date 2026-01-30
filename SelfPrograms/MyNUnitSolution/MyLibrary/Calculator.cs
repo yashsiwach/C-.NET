@@ -1,14 +1,21 @@
-namespace MyLibrary;
-
-public class Calculator
+public interface IPerson
 {
-    public int Add(int a, int b) => a + b;
-    
-    public double Divide(double a, double b)
+    string GetName();
+    void SetName(string name);
+}
+
+public class Student : IPerson
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+
+    public string GetName()
     {
-        if (b == 0) throw new DivideByZeroException("Cannot divide by zero.");
-        return a / b;
+        return this.Name;
     }
 
-    public string GetGreeting(string name) => $"Hello, {name}!";
+    public void SetName(string name)
+    {
+        this.Name = name;
+    }
 }
