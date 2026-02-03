@@ -8,7 +8,7 @@ public class Program
         Console.WriteLine(FormatTime(totalSeconds));
     }
 
-    // Summary: Converts seconds into m:ss format with leading zero for seconds.
+    //  Converts seconds into m:ss format with leading zero for seconds.
     static string FormatTime(int totalSeconds)
     {
         int minutes = totalSeconds / 60;

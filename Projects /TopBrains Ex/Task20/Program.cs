@@ -19,7 +19,7 @@ public class Program
     }
 }
 
-// Summary: Sorts students by highest marks, then by youngest age if marks are equal.
+// Sorts students by highest marks, then by youngest age if marks are equal.
 class StudentComparer : IComparer<Student>
 {
     public int Compare(Student x, Student y)

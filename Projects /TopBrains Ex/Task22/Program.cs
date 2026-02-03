@@ -8,7 +8,7 @@ public class Program
         Console.WriteLine(TotalArea(shapes));
     }
 
-    // Summary: Computes total area of shapes using abstraction and interface.
+    //Computes total area of shapes using abstraction and interface.
     static double TotalArea(string[] shapes)
     {
         double total = 0;

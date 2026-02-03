@@ -10,7 +10,7 @@ public class Program
         Console.WriteLine(CountChar(input, target));
     }
 
-    // Summary: Counts how many times a given character appears in a string.
+    // Counts how many times a given character appears in a string.
     static int CountChar(string s, char c)
     {
         int count = 0;

@@ -5,10 +5,7 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        // Summary:
-        // This program reads a log file (log.txt) that contains mixed log levels
-        // such as INFO, WARN, and ERROR. It filters out only the lines that contain
-        // the keyword "ERROR" and writes those lines into a new file (error.txt).
+    
 
         string inputFile = "log.txt";
         string outputFile = "error.txt";
@@ -28,7 +25,6 @@ public class Program
         {
             foreach (string line in lines)
             {
-                // Filter condition: write only lines containing "ERROR"
                 if (line.Contains("ERROR"))
                 {
                     writer.WriteLine(line);

@@ -8,7 +8,7 @@ public class Program
         Console.WriteLine(TotalPayroll(employees));
     }
 
-    // Summary: Calculates total payroll using inheritance and polymorphism.
+    // Calculates total payroll using inheritance and polymorphism.
     static decimal TotalPayroll(string[] employees)
     {
         decimal total = 0;

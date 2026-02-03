@@ -11,3 +11,4 @@
             return b == 0 ? a : Gcd(b, a % b);
         }
 }
+}
