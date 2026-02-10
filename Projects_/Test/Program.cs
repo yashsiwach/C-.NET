@@ -1,25 +1,42 @@
-﻿public class Demo
+﻿using System;
+using System.Collections.Generic;
+
+public class person
 {
-    public int Id{get;set;}
-    public string? Name{get;set;}
+    public string? Name { get; set; }
+    public int Age { get; set; }
+    public int marks { get; set; }
 }
+
+// public class Compro : IComparer<int>
+// {
+//     public int Compare(int a , int b)
+//     {
+//         if(a.Key==b.Key)return a.Value-b.Value;
+//         else return b.Key-a.Key;
+//     }
+// }
 
 public class Program
 {
-
-    public static void Main(string[] args)
+    public static void Main()
     {
-        Demo a=new Demo();
-        Demo b=new Demo();
-        System.Console.WriteLine(a.Equals(b));
-        List<Demo>data=new List<Demo>();
-        data.Add(new Demo{Id=1,Name="tester1"});
-        data.Add(new Demo{Id=2,Name="tester11"});
-                data.Add(new Demo{Id=2,Name="tester11"});
+        // List<person> lis = new List<person>
+        // {
+        //     new person { Name="yash", Age=40, marks=23 },
+        //     new person { Name="test", Age=22, marks=34 },
+        //     new person { Name="gafda", Age=23, marks=67 }
+        // };
 
-        data.Add(new Demo{Id=3,Name="tester34"});
-        var temp=data.Average(x=>x.Id);
-        var temp1=data.Distinct().ToList();
-        temp1.ForEach(x=>System.Console.WriteLine(x.Name+ " "+x.Id));
+        // lis.Sort(new Compro());
+
+        // lis.ForEach(x => Console.WriteLine(x.Name));
+        SortedDictionary<int,int>dict=new SortedDictionary<int,int>();
+        dict[1]=5;
+        dict[2]=2;
+        dict[3]=1;
+        dict[2]=5;
+        var t=dict.ToDictionary(x=>x.Key,x=>x.Value);
     }
+
 }
