@@ -10,6 +10,7 @@ public interface IStudent
 
 public interface ICourse
 {
+    
     string CourseCode { get; }
     string Title { get; }
     int MaxCapacity { get; }
