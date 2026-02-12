@@ -47,7 +47,7 @@ public class PriorityQueue<T> where T : IPatient
         }
         throw new InvalidOperationException("Queue is empty");
     }
-
+d
     public int GetCountByPriority(int priority)
     {
         return _queues.ContainsKey(priority) ? _queues[priority].Count : 0;

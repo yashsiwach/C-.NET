@@ -47,8 +47,7 @@ public class Portfolio<T> where T : IFinancialInstrument
         return total;
     }
 
-    public (T instrument, decimal returnPercentage)? GetTopPerformer(
-        Dictionary<T, decimal> purchasePrices)
+    public (T instrument, decimal returnPercentage)? GetTopPerformer(Dictionary<T, decimal> purchasePrices)
     {
         T best = default;
         decimal bestReturn = decimal.MinValue;
@@ -101,11 +100,7 @@ public class Bond : IFinancialInstrument
 // 3. Trading Strategy
 public class TradingStrategy<T> where T : IFinancialInstrument
 {
-    public void Execute(
-        Portfolio<T> portfolio,
-        IEnumerable<T> marketData,
-        Func<T, bool> buyCondition,
-        Func<T, bool> sellCondition)
+    public void Execute(Portfolio<T> portfolio,IEnumerable<T> marketData,Func<T, bool> buyCondition,Func<T, bool> sellCondition)
     {
         foreach (var instrument in marketData)
         {
