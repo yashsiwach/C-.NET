@@ -28,7 +28,7 @@ public class Solution {
                 }
                 if(dict.ContainsKey(s[j])){
                     dict[s[j]]++;
-                    if(dict[s[j]]>0)req++;
+                   // if(dict[s[j]]>0)req++;
                 }
                 j++;
             }
