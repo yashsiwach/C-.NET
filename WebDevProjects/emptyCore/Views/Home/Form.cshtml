@@ -1,0 +1,13 @@
+﻿@model emptyCore.Models.Empolyee
+
+<form asp-action="Index" asp-controller="Home" method="post">
+
+    <input asp-for="Name" class="form-control" placeholder="Enter Name" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+
+    <input asp-for="Age" class="form-control" placeholder="Enter Age" />
+    <span asp-validation-for="Age" class="text-danger"></span>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
