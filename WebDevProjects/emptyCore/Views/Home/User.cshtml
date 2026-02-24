@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "User";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+
+}
+
+<h1>User</h1>
+
+@ViewBag.data1;
+<br />
+@ViewData["data2"];
+<br />
+@foreach(var item in ViewBag.data3)
+{
+    <p>@item</p>
+}
+@TempData["data4"]
