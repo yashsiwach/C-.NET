@@ -17,5 +17,6 @@ public class Student : IPerson
     public void SetName(string name)
     {
         this.Name = name;
+        
     }
 }
