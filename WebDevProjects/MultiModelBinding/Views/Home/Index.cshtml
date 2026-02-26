@@ -1,0 +1,64 @@
+﻿@model MultiModelBinding.Models.SchoolViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<partial name="_Std" />
+<div class=" container">
+    @if(Model.Students.Count>0)
+    {
+        <h2>Students</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Gender</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model.Students)
+            {
+                <tr>
+                    <td>@student.Id</td>
+                    <td>@student.Name</td>
+                    <td>@student.Gender</td>
+                </tr>
+            }
+		</tbody>
+		</table>
+    }
+    else
+    {
+        <p>No Data Found</p>
+    }
+    @if (Model.Teachers.Count > 0)
+        {
+            <h2>Teachers</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Subject</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var student in Model.Teachers)
+                {
+                    <tr>
+                        <td>@student.Id</td>
+                        <td>@student.Name</td>
+                        <td>@student.Subject</td>
+                    </tr>
+                }
+            </tbody>
+	    </table>
+    }
+    else
+    {
+        <p>No Data Found</p>
+	}
+</div>

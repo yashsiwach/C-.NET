@@ -1,0 +1,9 @@
+﻿@model MultiModelBinding.Models.Product
+<div class="card" style="width:18rem">
+	<img src="@Model.ImageUrl" asp-append-version="true" class="card-img-top" alt="@Model.Name">
+	<div class="card-body">
+		<h5 class="card-title">@Model.Name</h5>
+		<p class="card-text">@Model.Description</p>
+		<a href="#" class="btn btn-primary">Buy Now</a>
+	</div>
+</div>

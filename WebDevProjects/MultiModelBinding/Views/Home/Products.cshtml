@@ -1,0 +1,17 @@
+﻿@model IEnumerable<MultiModelBinding.Models.Product>
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h1>Products</h1>
+<div class="container">
+    <div class="row">
+        @foreach (var product in Model)
+        {
+			<div class="col-md-4 mb-3">
+			<partial name="_partialProduct" model="product" />
+			</div>
+        }
+	</div>
+
+</div>
