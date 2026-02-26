@@ -1,0 +1,9 @@
+﻿@model List<DbForm.Models.Student>
+@foreach (var student in Model)
+
+{
+	<br />
+	<p>@student.Name</p>
+	<p>@student.Id</p>
+	<p>@student.Dept</p>
+}

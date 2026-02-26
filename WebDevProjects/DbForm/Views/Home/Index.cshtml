@@ -1,0 +1,32 @@
+﻿@model DbForm.Models.Student
+@{
+    ViewData["Title"] = "Home Page";
+}
+<button class="btn btn-primary"><a asp-action="ViewStudents" asp-controller="Home" style="color:white;text-decoration:none">View Students</a></button>
+
+<form asp-action="Result" asp-controller="Home" method="post">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" style="color:red"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Id"></label>
+        <input asp-for="Id" class="form-control" />
+        <span asp-validation-for="Id" style="color:red"></span>
+
+    </div>
+    <div class="form-group">
+        <label asp-for="Dept"></label>
+        <input asp-for="Dept" class="form-control" />
+        <span asp-validation-for="Dept" style="color:red"></span>
+       
+
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<p>@ViewBag.SessionId</p>
+@foreach (var p in ViewBag.processes)
+        {
+          <p> $"PID: {@p.Id}  Name: {@p.ProcessName}"</p>
+        }
