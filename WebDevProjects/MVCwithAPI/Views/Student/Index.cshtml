@@ -1,0 +1,60 @@
+﻿@model IEnumerable<MVCwithAPI.Models.Student>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+@if (TempData["msg"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["msg"]
+    </div>
+}
+@if (TempData["del"] != null)
+{
+    <div class="alert alert-success">
+		@TempData["del"]
+    </div>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.rollno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.firstname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.marks)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.rollno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.firstname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.marks)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.rollno }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.rollno }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.rollno })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
