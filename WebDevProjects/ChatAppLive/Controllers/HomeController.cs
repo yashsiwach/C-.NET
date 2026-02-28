@@ -1,16 +1,13 @@
-using ChatApp.Models;
+using ChatAppLive.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace ChatApp.Controllers
+namespace ChatAppLive.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Register()
-        {
-            return View();
-        }
-        public IActionResult Login()
+
+        public IActionResult Index()
         {
             return View();
         }

@@ -1,0 +1,104 @@
+@model Flight.Models.SearchViewModel
+
+@{
+    ViewData["Title"] = "Flight Search";
+}
+
+<div class="animate-in" style="max-width: 680px; margin: 2rem auto 0;">
+    <div class="glass-card">
+        <div class="card-header-gradient">
+            <h1 class="card-title">
+                <span class="card-title-icon">✈️</span>
+                Flight Search
+            </h1>
+        </div>
+        <div class="card-body-custom">
+            <div asp-validation-summary="ModelOnly" class="validation-summary-errors"></div>
+
+            <form id="searchForm">
+                @Html.AntiForgeryToken()
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label asp-for="Source" class="form-label-custom">
+                            <span class="form-label-icon">🛫</span> From
+                        </label>
+                        <select asp-for="Source" asp-items="Model.SourceList" class="form-select-custom" id="sourceSelect">
+                            <option value="">Select departure city</option>
+                        </select>
+                        <span asp-validation-for="Source" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Destination" class="form-label-custom">
+                            <span class="form-label-icon">🛬</span> To
+                        </label>
+                        <select asp-for="Destination" asp-items="Model.DestinationList" class="form-select-custom" id="destinationSelect">
+                            <option value="">Select arrival city</option>
+                        </select>
+                        <span asp-validation-for="Destination" class="text-danger"></span>
+                        <div id="sameLocationError" class="text-danger" style="display:none;">
+                            Source and Destination cannot be the same.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="NumberOfPersons" class="form-label-custom">
+                        <span class="form-label-icon">👥</span> Passengers
+                    </label>
+                    <input asp-for="NumberOfPersons" type="number" class="form-control-custom" min="1" max="10" placeholder="How many passengers? (1–10)" />
+                    <span asp-validation-for="NumberOfPersons" class="text-danger"></span>
+                </div>
+
+                <div class="btn-actions">
+                    <button type="submit" class="btn-custom btn-success-custom" id="btnFlightOnly"
+                            formaction="@Url.Action("SearchFlights", "Flight")" formmethod="post">
+                        🔍 Search Flights
+                    </button>
+                    <button type="submit" class="btn-custom btn-warning-custom" id="btnFlightHotel"
+                            formaction="@Url.Action("SearchFlightsWithHotels", "Flight")" formmethod="post">
+                        🏨 Flight + Hotel
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        $(document).ready(function () {
+            // Prevent selecting same source and destination
+            function validateLocations() {
+                var source = $('#sourceSelect').val();
+                var dest = $('#destinationSelect').val();
+                if (source && dest && source === dest) {
+                    $('#sameLocationError').show();
+                    $('#btnFlightOnly, #btnFlightHotel').prop('disabled', true);
+                } else {
+                    $('#sameLocationError').hide();
+                    $('#btnFlightOnly, #btnFlightHotel').prop('disabled', false);
+                }
+            }
+
+            $('#sourceSelect, #destinationSelect').change(validateLocations);
+
+            // Add loading spinner on button click
+            $('#searchForm').submit(function () {
+                var source = $('#sourceSelect').val();
+                var dest = $('#destinationSelect').val();
+                if (source && dest && source === dest) {
+                    return false;
+                }
+
+                var $btn = $(document.activeElement);
+                if ($btn.is('button[type="submit"]')) {
+                    $btn.prop('disabled', true);
+                    $btn.html('<span class="spinner-border spinner-border-sm" role="status"></span> Searching...');
+                }
+            });
+        });
+    </script>
+}

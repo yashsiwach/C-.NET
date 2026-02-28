@@ -1,0 +1,124 @@
+@{
+    ViewData["Title"] = "Search Results";
+    var searchType = (string)ViewBag.SearchType;
+    var source = (string)ViewBag.Source;
+    var destination = (string)ViewBag.Destination;
+    var persons = (int)ViewBag.Persons;
+}
+
+<div class="animate-in" style="max-width: 900px; margin: 2rem auto 0;">
+
+    <div class="results-header">
+        <h1 class="results-title">📋 Search Results</h1>
+        <div class="results-meta">
+            <span class="results-badge">🛫 @source</span>
+            <span class="results-badge">🛬 @destination</span>
+            <span class="results-badge">👥 @persons @(persons == 1 ? "person" : "persons")</span>
+            @if (searchType == "FlightHotel")
+            {
+                <span class="results-badge">🏨 + Hotel</span>
+            }
+        </div>
+    </div>
+
+    @if (searchType == "FlightOnly")
+    {
+        var results = Model as List<Flight.Models.FlightResult>;
+        if (results == null || results.Count == 0)
+        {
+            <div class="glass-card">
+                <div class="card-body-custom no-results">
+                    <span class="no-results-icon">🔍</span>
+                    <p class="no-results-text">No flights found for this route. Try a different city pair.</p>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="glass-card">
+                <div class="results-table-wrapper">
+                    <table class="results-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Airline</th>
+                                <th>Type</th>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>Total Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var f in results)
+                            {
+                                <tr>
+                                    <td>@f.FlightId</td>
+                                    <td class="flight-name-cell">@f.FlightName</td>
+                                    <td>
+                                        <span class="flight-type-badge @(f.FlightType == "Domestic" ? "badge-domestic" : "badge-international")">
+                                            @f.FlightType
+                                        </span>
+                                    </td>
+                                    <td>@f.Source</td>
+                                    <td>@f.Destination</td>
+                                    <td class="cost-cell">₹@f.TotalCost.ToString("N2")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        var hotelResults = Model as List<Flight.Models.FlightHotelResult>;
+        if (hotelResults == null || hotelResults.Count == 0)
+        {
+            <div class="glass-card">
+                <div class="card-body-custom no-results">
+                    <span class="no-results-icon">🔍</span>
+                    <p class="no-results-text">No flight + hotel packages found for this route. Try a different city pair.</p>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="glass-card">
+                <div class="results-table-wrapper">
+                    <table class="results-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Airline</th>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>Hotel</th>
+                                <th>Total Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var r in hotelResults)
+                            {
+                                <tr>
+                                    <td>@r.FlightId</td>
+                                    <td class="flight-name-cell">@r.FlightName</td>
+                                    <td>@r.Source</td>
+                                    <td>@r.Destination</td>
+                                    <td>🏨 @r.HotelName</td>
+                                    <td class="cost-cell">₹@r.TotalCost.ToString("N2")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+    }
+
+    <div style="margin-top: 1.5rem;">
+        <a asp-controller="Flight" asp-action="Index" class="back-link" id="back-to-search">
+            ← Back to Search
+        </a>
+    </div>
+</div>

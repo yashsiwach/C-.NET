@@ -1,16 +1,12 @@
-using ChatApp.Models;
+using Flight.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace ChatApp.Controllers
+namespace Flight.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Register()
-        {
-            return View();
-        }
-        public IActionResult Login()
+        public IActionResult Index()
         {
             return View();
         }
