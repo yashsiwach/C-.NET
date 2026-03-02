@@ -1,0 +1,32 @@
+﻿<h2>Private Chat</h2>
+
+<input type="text" id="receiverInput" placeholder="Receiver username" />
+<input type="text" id="messageInput" placeholder="Message" />
+<button onclick="sendPrivate()">Send</button>
+
+<ul id="messagesList"></ul>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+
+<script>
+    const username = prompt("Enter your username");
+
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("/chatHub?username=" + username)
+        .build();
+
+    connection.on("ReceivePrivateMessage", (sender, message) => {
+        const li = document.createElement("li");
+        li.textContent = "Message: " + message;
+        document.getElementById("messagesList").appendChild(li);
+    });
+
+    connection.start();
+
+    function sendPrivate() {
+        const receiver = document.getElementById("receiverInput").value;
+        const message = document.getElementById("messageInput").value;
+
+        connection.invoke("SendPrivateMessage", receiver, message);
+    }
+</script>

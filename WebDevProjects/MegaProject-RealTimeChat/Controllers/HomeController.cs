@@ -1,8 +1,8 @@
-using ChatApp.Models;
+using MegaProject_RealTimeChat.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace ChatApp.Controllers
+namespace MegaProject_RealTimeChat.Controllers
 {
     public class HomeController : Controller
     {
