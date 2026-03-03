@@ -1,0 +1,93 @@
+﻿@model List<Message>
+
+@{
+    ViewData["Title"] = "Private Chat";
+}
+
+<h2>Private Chat</h2>
+
+<hr />
+
+<!-- Hidden fields -->
+<input type="hidden" id="receiverId" value="@ViewBag.ReceiverId" />
+<input type="hidden" id="conversationId" value="@ViewBag.ConversationId" />
+
+<!-- Messages Container -->
+<div id="chatContainer" style="height:400px; overflow-y:auto; border:1px solid #ccc; padding:10px;">
+    <ul id="messages" style="list-style:none; padding:0;">
+        @foreach (var msg in Model)
+        {
+            <li style="margin-bottom:10px;">
+                <strong>@msg.Sender.Email :</strong>
+                @msg.Text
+                <br />
+                <small style="color:gray;">@msg.SentAt.ToLocalTime().ToString("dd-MM-yyyy HH:mm:ss")</small>
+            </li>
+        }
+    </ul>
+</div>
+
+<hr />
+
+<!-- Message Input -->
+<div>
+    <input type="text" id="messageInput" placeholder="Type message..."
+           style="width:80%;" />
+    <button onclick="sendMessage()">Send</button>
+</div>
+
+<!-- SignalR -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+
+<script>
+    const receiverId = document.getElementById("receiverId").value;
+    const conversationId = document.getElementById("conversationId").value;
+
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("/chatHub")
+        .build();
+
+    connection.on("ReceiveMessage", function (senderId, text, sentAt) {
+
+        const li = document.createElement("li");
+        li.style.marginBottom = "10px";
+
+        li.innerHTML = "<strong>" + senderId + " :</strong> " + text +
+            "<br><small style='color:gray;'>" + sentAt + "</small>";
+
+        document.getElementById("messages").appendChild(li);
+
+        scrollToBottom();
+    });
+
+    connection.start().catch(function (err) {
+        return console.error(err.toString());
+    });
+
+    function sendMessage() {
+
+        const text = document.getElementById("messageInput").value;
+
+        if (text.trim() === "")
+            return;
+
+        connection.invoke("SendMessage", receiverId, parseInt(conversationId), text)
+            .then(function () {
+                document.getElementById("messageInput").value = "";
+            })
+            .catch(function (err) {
+                return console.error(err.toString());
+            });
+    }
+
+    document.getElementById("messageInput").addEventListener("keydown", function (e) {
+        if (e.key === "Enter") sendMessage();
+    });
+
+    function scrollToBottom() {
+        const container = document.getElementById("chatContainer");
+        container.scrollTop = container.scrollHeight;
+    }
+
+    scrollToBottom();
+</script>

@@ -1,7 +1,7 @@
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 
-namespace MegaProject_RealTimeChat
+using CRUDwithMongoDB.Services;
+
+namespace CRUDwithMongoDB
 {
     public class Program
     {
@@ -11,16 +11,11 @@ namespace MegaProject_RealTimeChat
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            builder.Services.AddDbContext<ApplicationDbContext>(options =>options.UseSqlServer(builder.Configuration.GetConnectionString("dbcs")));
+            builder.Services.AddSingleton<StudentService>();
 
-            IdentityBuilder identityBuilder = builder.Services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<ApplicationDbContext>();
-            builder.Services.AddControllersWithViews();
-            builder.Services.AddRazorPages();
-
-            builder.Services.AddSignalR();
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.f
+            // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
@@ -31,16 +26,13 @@ namespace MegaProject_RealTimeChat
             app.UseHttpsRedirection();
             app.UseRouting();
 
-            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapStaticAssets();
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}")
+                pattern: "{controller=Student}/{action=Index}/{id?}")
                 .WithStaticAssets();
-            app.MapRazorPages();
-            app.MapHub<ChatHub>("/chatHub");
 
             app.Run();
         }
